@@ -1,0 +1,49 @@
+.nomargin {
+    margin: 0;
+}
+
+.nopadding {
+    padding: 0 !important;
+}
+
+.prenav{
+    background-color: #282828;
+    color: #fff;
+    padding: 8px;
+}
+
+.uk-icon{
+    color: #000;
+}
+
+.uk-panel img{
+    height: 800px;
+    background-size: cover; 
+    -webkit-background-size: cover;   
+}
+
+.uk-navbar-nav li a {
+    color: #000 !important;
+}
+
+.uk-navbar-nav li a:hover{
+    color: #7e7373;
+}
+
+.logo-img{
+    width: 180px;
+}
+
+.nav-item-height {
+    min-height: 30px !important;
+}
+
+/* Category page */
+.category-content{
+    min-width: 100vh;
+}
+
+/* product */
+.product {
+    height: 768px;
+}
