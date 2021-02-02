@@ -50,6 +50,10 @@ Route::get('gallerysorted', [ProductController::class, 'gallerySorted'])->name('
 Route::get('gallerysortedreverse', [ProductController::class, 'gallerySortedreverse'])->name('gallery.gallerysortedreverse');
 Route::get('gallerypricesorted', [ProductController::class, 'galleryPriceSorted'])->name('gallery.gallerypricesorted');
 Route::get('gallerypricesortedreverse', [ProductController::class, 'galleryPriceSortedreverse'])->name('gallery.gallerypricesortedreverse');
+Route::get('catasc/{cat}', [ProductController::class, 'catasc'])->name('gallery.catasc');
+Route::get('catdesc/{cat}', [ProductController::class, 'catdesc'])->name('gallery.catdesc');
+Route::get('catupper/{cat}', [ProductController::class, 'catupper'])->name('gallery.catupper');
+Route::get('catlower/{cat}', [ProductController::class, 'catlower'])->name('gallery.catlower');
 Route::get('/products/{$id}', [ProductController::class, 'detail'])->name('gallery.detail');
 Route::post('sendemail', [ProductController::class, 'sendEmail'])->name('sendemail');
 

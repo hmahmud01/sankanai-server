@@ -50,7 +50,51 @@ class ProductController extends Controller
 
     public function galleryCategory($cat){
         $products = Product::where('cattegory', $cat)->get();       
-        return view('site.category-products', compact('products'));
+        return view('site.category-products', compact('products'))->with(compact('cat'));
+    }
+
+    /**
+     * Gallery Category sort functions
+     */
+
+    public function catasc($cat){
+        $products = Product::where('cattegory', $cat)->get()->sortBy('name');   
+        return view('site.category-products', compact('products'))->with(compact('cat'));    
+    }
+
+    public function catdesc($cat){
+        $products = Product::where('cattegory', $cat)->get()->sortBy('name')->reverse();   
+        return view('site.category-products', compact('products'))->with(compact('cat'));   
+    }
+
+    public function catupper($cat){
+        $products = Product::where('cattegory', $cat)->get()->sortBy('price');   
+        return view('site.category-products', compact('products'))->with(compact('cat'));       
+    }
+
+    public function catlower($cat){
+        $products = Product::where('cattegory', $cat)->get()->sortBy('price')->reverse();   
+        return view('site.category-products', compact('products'))->with(compact('cat'));     
+    }
+
+    public function galleryCatSorted($cat){
+        $products = Product::where('cattegory', $cat)->get()->sortBy('name');   
+        return view('site.category-products', compact('products'))->with(compact('cat'));
+    }
+
+    public function galleryCatSortedreverse($cat){
+        $products = Product::where('cattegory', $cat)->sortBy('name')->reverse();   
+        return view('site.category-products', compact('products'))->with(compact('cat'));
+    }
+
+    public function galleryCatPriceSorted($cat){
+        $products = Product::where('cattegory', $cat)->sortBy('price');   
+        return view('site.category-products', compact('products'))->with(compact('cat'));
+    }
+
+    public function galleryCatPriceSortedreverse($cat){
+        $products = Product::where('cattegory', $cat)->sortBy('price')->reverse();   
+        return view('site.category-products', compact('products'))->with(compact('cat'));
     }
 
     public function detail($id){
@@ -85,8 +129,7 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)    
-    {   
-        
+    {
         $path = $request->file('image')->store('public/images');
         $product = new Product;
 
@@ -102,15 +145,27 @@ class ProductController extends Controller
     }    
     public function storeproduct(Request $request)    
     {   
-        
+        // return $request;
         $path = $request->file('image')->store('public/images');
         $product = new Product;
 
         $product->name = $request->name;
         $product->description = $request->description;
-        $product->cattegory = $request->cattegory;
+        // $product->cattegory = $request->cattegory;
         $product->price = $request->price;
         $product->image = $path;
+
+        if($request->main_category == "bedroom"){
+            $product->cattegory = $request->cat_bed;
+        }elseif($request->main_category == "mattress"){
+            $product->cattegory = $request->cat_mattress;
+        }elseif($request->main_category == "dining"){
+            $product->cattegory = $request->cat_dining;
+        }elseif($request->main_category == "living"){
+            $product->cattegory = $request->cat_living;
+        }elseif($request->main_category == "accent"){
+            $product->cattegory = $request->cat_accent;
+        }
 
         $product->save();
 

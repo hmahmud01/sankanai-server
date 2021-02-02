@@ -38,9 +38,9 @@
                 </div>
 
                 <div class="uk-margin" id="bedroom">
-                    <label class="uk-form-label" for="cattegory">Bedroom Section</label>
+                    <label class="uk-form-label" for="cat_bed">Bedroom Section</label>
                     <div class="uk-form-controls">
-                        <select class="uk-select" id="cattegory" name="cattegory">
+                        <select class="uk-select" id="cat_bed" name="cat_bed">
                             <option value="allsizesbed">All Sizes Beds only</option>
                             <option value="adultbed">Adult Bedroom Sets</option>    
                             <option value="childrenbed">Children/Youth Bedroom Sets</option>
@@ -63,9 +63,9 @@
                 </div>
 
                 <div class="uk-margin" id="mattress">
-                    <label class="uk-form-label" for="cattegory">Mattress Section</label>
+                    <label class="uk-form-label" for="cat_mattress">Mattress Section</label>
                     <div class="uk-form-controls">
-                        <select class="uk-select" id="cattegory" name="cattegory">
+                        <select class="uk-select" id="cat_mattress" name="cat_mattress">
                             <option value="basicmattresses">Basic Mattresses</option>
                             <option value="hardmattresses">Hard/Firm Mattress</option>    
                             <option value="mediummattresses">Medium FIrm Mattress</option>
@@ -87,9 +87,9 @@
                     @enderror
                 </div>
                 <div class="uk-margin" id="dining">
-                    <label class="uk-form-label" for="cattegory">Dining Section</label>
+                    <label class="uk-form-label" for="cat_dining">Dining Section</label>
                     <div class="uk-form-controls">
-                        <select class="uk-select" id="cattegory" name="cattegory">
+                        <select class="uk-select" id="cat_dining" name="cat_dining">
                             <option value="smalldine">Small Size Dinettes</option>
                             <option value="mediumdine">Medium Size Dining Sets</option>
                             <option value="largedine">Large Size Dining Sets</option>    
@@ -111,9 +111,9 @@
                     @enderror
                 </div>
                 <div class="uk-margin" id="living">
-                    <label class="uk-form-label" for="cattegory">Living Room Section</label>
+                    <label class="uk-form-label" for="cat_living">Living Room Section</label>
                     <div class="uk-form-controls">
-                        <select class="uk-select" id="cattegory" name="cattegory">
+                        <select class="uk-select" id="cat_living" name="cat_living">
                             <option value="fabricsofa">Fabric Sofas & Sectionals</option>
                             <option value="leathersofa">Leather Sofas & Sectionals</option>              
                             <option value="classicsofa">Classic Traditional Sofa Sets</option>
@@ -135,9 +135,9 @@
                     @enderror
                 </div>
                 <div class="uk-margin" id="accent">
-                    <label class="uk-form-label" for="cattegory">Accent Section</label>
+                    <label class="uk-form-label" for="cat_accent">Accent Section</label>
                     <div class="uk-form-controls">
-                        <select class="uk-select" id="cattegory" name="cattegory">
+                        <select class="uk-select" id="cat_accent" name="cat_accent">
                             <option value="lamps">Lamps & Lights</option>
                             <option value="studydesk">Study/ Computer Desks</option>    
                             <option value="officedesk">Office/ Study Chairs</option>
@@ -159,21 +159,6 @@
                     @enderror
                 </div>
 
-                <!-- <div class="uk-margin">
-                    <label class="uk-form-label" for="cattegory">Category</label>
-                    <div class="uk-form-controls">
-                        <select class="uk-select" id="cattegory" name="cattegory">
-                            <option value="Cat1">Cat1</option>
-                            <option value="Cat1">Cat2</option>
-                        </select>
-                    </div>
-                    @error('cattegory')
-                    <div class="uk-alert-danger" uk-alert>
-                        <a class="uk-alert-close" uk-close></a>
-                        <p>{{ $message }}</p>
-                    </div>
-                    @enderror
-                </div> -->
 
                 <div class="uk-margin">
                     <label class="uk-form-label" for="description">Description</label>

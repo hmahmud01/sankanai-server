@@ -15,7 +15,7 @@
                             <h3 class="uk-card-title">{{ $deal->name }}</h3>
                             <p class="uk-text-truncate">{{ $deal->description }}</p>                            
                             <a href="{{ route('deals.show', $deal)}}" class="uk-button uk-button-text">Detail</a>
-                            <a href="#" data-name="{{ $deal->name }}" data-price="0.5" data-img="{{ Storage::url($deal->image) }}" class="add-to-cart uk-button uk-button-text">Add to Cart</a>
+                            <a href="#" data-name="{{ $deal->name }}" data-price="0.5" data-img="{{ Storage::url($deal->image) }}" class="add-to-cart uk-button uk-button-text">Add to Wishlist</a>
                         </div>
                     </div>
                 </div>

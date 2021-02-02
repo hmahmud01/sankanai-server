@@ -11,8 +11,8 @@
 <body>  
     <div class="prenav">
     
-        <p class="nomargin nopadding uk-text-right uk-margin-right uk-visible@m">Sankanai Furniture & Mattress, 2563 Eglinton Avenue East Scarborough, ON M1K 2R7 Tel: (416) 264-9642</p>
-        <p class="nomargin nopadding uk-text-center uk-margin-right uk-hidden@m">Sankanai Furniture & Mattress, 2563 Eglinton Avenue East Scarborough, ON M1K 2R7 Tel: (416) 264-9642</p>
+        <p class="nomargin nopadding uk-text-right uk-margin-right uk-visible@m">Sankanai Furniture & Mattress, 2563 Eglinton Avenue East, Scarborough, ON M1K 2R7 Tel: (416) 264-9642</p>
+        <p class="nomargin nopadding uk-text-center uk-margin-right uk-hidden@m">Sankanai Furniture & Mattress, 2563 Eglinton Avenue East, Scarborough, ON M1K 2R7 Tel: (416) 264-9642</p>
     </div>
     <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-light; top: 200">
         <nav class="uk-navbar-container" uk-navbar>

@@ -14,7 +14,7 @@
         <p class="uk-article-meta">Category: {{ $deal->cattegory }}</p>                
         <p class="uk-text-lead">Price: {{ $deal->price == 0.00 ? "Call For Price" : $deal->price . "CA$" }}</p>        
         <p>{{ $deal->description }}</p>
-        <a href="#" data-name="{{ $deal->name }}" data-price="0.5" data-img="{{ Storage::url($deal->image) }}" class="add-to-cart uk-button uk-button-secondary">Add to Cart</a>
+        <a href="#" data-name="{{ $deal->name }}" data-price="0.5" data-img="{{ Storage::url($deal->image) }}" class="add-to-cart uk-button uk-button-secondary">Add to Wishlist</a>
         </article>
     </div>
 </div>
