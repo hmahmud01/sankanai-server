@@ -6,6 +6,7 @@
     <title>Sankanai Furniture</title>
     <link rel="stylesheet" href="assets/css/uikit.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://printjs-4de6.kxcdn.com/print.min.css">
 
 </head>
 <body>  
@@ -111,7 +112,7 @@
     <script src="assets/js/uikit-icons.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/script.js"></script>
-
+    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
 </body>
 </html>
 
