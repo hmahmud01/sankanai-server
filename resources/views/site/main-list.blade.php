@@ -28,7 +28,7 @@
             </div>
             <div class="uk-navbar-right">                
                 <ul class="uk-navbar-nav uk-visible@m">
-                    <li><a href="#">Sign in</a></li>
+                    <!-- <li><a href="#">Sign in</a></li> -->
                     <li><a href="#cartlayer" uk-toggle><span class="uk-margin-small-right" ></span> Wishlist (<span class="total-count"></span>)</a></li>
                 </ul>
                 <a class="uk-navbar-toggle uk-hidden@m uk-icon uk-navbar-toggle-icon" uk-toggle="target: #main-menu"><span class="uk-margin-small-right" uk-icon="icon: menu"></span></a>
@@ -47,7 +47,7 @@
 
                 
                 <li class="uk-nav-divider"></li>
-                <li><a href="#"><span class="uk-margin-small-right" ></span> Login</a></li>
+                <!-- <li><a href="#"><span class="uk-margin-small-right" ></span> Login</a></li> -->
                 <li><a href="#cartlayer" uk-toggle><span class="uk-margin-small-right" ></span> Cart (<span class="total-count"></span>)</a></li>
             </ul>
     
@@ -59,10 +59,11 @@
 
             <button class="uk-offcanvas-close" type="button" uk-close></button>            
             <h3>Your Wishlist</h3>
-            <table class="uk-table uk-table-divider show-cart">
-            </table>
+            
             <button class="clear-cart uk-button uk-button-primary uk-button-small">Clear Cart</button>
-            <form class="uk-form-stacked">
+            <form class="uk-form-stacked" method="POST" action="{{ route('sendemail') }}">@csrf
+                <table class="uk-table uk-table-divider show-cart">
+                </table>
                 <div class="uk-margin">
                     <label class="uk-form-label" for="name">Name</label>
                     <div class="uk-form-controls">
@@ -87,7 +88,7 @@
                 <div class="uk-margin">
                     <label class="uk-form-label" for="message">Message</label>
                     <div class="uk-form-controls">
-                        <textarea class="uk-textarea" id="message" name="message" type="text" rows="5" placeholder="Message"></textarea>
+                        <textarea class="uk-textarea" id="notes" name="notes" type="text" rows="5" placeholder="Message"></textarea>
                     </div>
                 </div>
 

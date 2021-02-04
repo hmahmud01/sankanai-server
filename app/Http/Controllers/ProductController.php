@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ProductController extends Controller
 {
@@ -173,9 +174,26 @@ class ProductController extends Controller
     }
 
     public function sendEmail(Request $request)
-    {   
-        return $request;
-        print "Inside send email";
+    {
+        $data = array(
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'notes' => $request->notes,
+            'images' => $request->images,
+        );
+        Mail::send('emails.sendEmail', $data, function($message) use ($data){
+            $message->to($data['email']);
+            $message->subject('Quotation Request');
+            $message->from('helpfurniturefm@gmail.com');
+        });
+
+        Mail::send('emails.sendSelf', $data, function($message) use ($data){
+            $message->to('infosankanai@gmail.com');
+            $message->subject('Quotation Request');
+            $message->from('helpfurniturefm@gmail.com');
+        });
+        return redirect('/')->with('success', 'Mail sent');
     }
 
     /**
